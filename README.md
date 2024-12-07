@@ -1,27 +1,26 @@
-## Prueba Técnica Frontend
--- NOMBRE: EFRAIN EDUARDO LANDAVERDE GONZALEZ
 
-## Getting Started
+# LuxTorontoRoof
+##### EFRAIN EDUARDO LANDAVERDE GONZALEZ
+### Landing Page en Next15
+-- Landing page para empresa de techado
+-- Pagina de proyectos
+-- Componentes reutilizables
+-- Componentes de navegacion
+-- Intefaces
+-- Utils
+-- Practicas SEO
 
-First, run the development server:
+Este proyecto utiliza el framework web Next.js en su version 15, el renderizado del lado del servidor (SSR), para mejorar el rendimiento y la experiencia del usuario.
 
+Diseño de la landing bajo mobile first. Se hace uso de Tailwind CSS, se utiliza la biblioteca Framer Motion. Además, se incorpora la librería GSAP  para agregar efectos de desplazamiento y animación a la navegación de la aplicación.
+
+En cuanto a la estructura del proyecto, se sigue una organización basada en la separación de componentes, con subcarpetas que agrupan los componentes según su funcionalidad. Esto facilita el mantenimiento y la escalabilidad del proyecto a medida que aumenta su complejidad.
+
+Instalacion
+```bash
+npm install
+```
+Inicializacion en local
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
-
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
