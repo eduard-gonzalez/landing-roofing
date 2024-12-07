@@ -1,10 +1,25 @@
-import Header from "@/components/layout/Header";
+import Hero from '@/components/home/Hero';
+import Services from '@/components/home/Services';
+import Projects from '@/components/home/Projects';
+import Contact from '@/components/home/Contact';
 
-const Home = () => {
+const HomePage = () => {
   return (
-    <Header />
+    <>
+      <section id="home">
+        <Hero />
+      </section>
+      <section id="services">
+        <Services />
+      </section>
+      <section id="projects">
+        <Projects />
+      </section>
+      <section id="contact">
+        <Contact />
+      </section>
+    </>
   );
-}
+};
 
-
-export default Home;
+export default HomePage;
