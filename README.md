@@ -26,3 +26,5 @@ Inicializacion en local
 ```bash
 npm run dev
 ```
+Toda la info de la landing se maneja desde
+https://github.com/eduard-gonzalez/landing-roofing/blob/main/src/utils/constants.ts
