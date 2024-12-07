@@ -1,14 +1,16 @@
 
 # LuxTorontoRoof
+URL DEL SITIO [VER AQUI](https://luxtorontoroof.vercel.app/).
+
 ##### EFRAIN EDUARDO LANDAVERDE GONZALEZ
 ### Landing Page en Next15
--- Landing page para empresa de techado
--- Pagina de proyectos
--- Componentes reutilizables
--- Componentes de navegacion
--- Intefaces
--- Utils
--- Practicas SEO
+- Landing page para empresa de techado
+- Pagina de proyectos
+- Componentes reutilizables
+- Componentes de navegacion
+- Intefaces
+- Utils
+- Practicas SEO
 
 Este proyecto utiliza el framework web Next.js en su version 15, el renderizado del lado del servidor (SSR), para mejorar el rendimiento y la experiencia del usuario.
 
