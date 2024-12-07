@@ -2,15 +2,12 @@ import { ROUTES } from "@/utils/navigation";
 import { MobileNavProps } from "@/interfaces/componentsInterface";
 import Button from "@/components/ui/Button";
 import NavLink from "@/components/ui/NavLink";
-import { Sun, Moon } from "lucide-react";
 
 const MobileNav = ({
   items,
   currentPath,
   isOpen,
   onClose,
-  isDark,
-  onThemeToggle,
   onNavigate,
 }: MobileNavProps) => {
   if (!isOpen) return null;
