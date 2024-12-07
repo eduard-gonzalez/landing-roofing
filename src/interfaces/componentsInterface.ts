@@ -29,6 +29,8 @@ export interface MobileNavProps {
   items: NavItem[];
   currentPath: string;
   isOpen: boolean;
+  isDark: boolean;
+  onThemeToggle: () => void;
   onClose: () => void;
   onNavigate: (href: string) => void;
 }

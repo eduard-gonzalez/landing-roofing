@@ -8,6 +8,13 @@ const Services = () => {
   const sectionRef = useRef<HTMLElement>(null);
   const cardsRef = useRef<HTMLDivElement[]>([]);
 
+  const goToContact = () => {
+    const contactSection = document.getElementById('contact');
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
     const tl = gsap.timeline({
@@ -131,8 +138,9 @@ const Services = () => {
                     </li>
                   ))}
                 </ul>
-
-                <button className="mt-8 px-6 py-2 relative overflow-hidden rounded-lg border-2 border-gold-500 text-gold-500 transition-all duration-300 before:absolute before:inset-0 before:bg-gold-500 before:scale-x-0 before:origin-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white group">
+                  
+                <button className="mt-8 px-6 py-2 relative overflow-hidden rounded-lg border-2 border-gold-500 text-gold-500 transition-all duration-300 before:absolute before:inset-0 before:bg-gold-500 before:scale-x-0 before:origin-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white group"
+                 onClick={goToContact}>
                   <span className="relative z-10">{SITE_CONFIG.services.cta}</span>
                 </button>
               </div>

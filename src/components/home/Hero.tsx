@@ -65,19 +65,18 @@ const Hero = () => {
             className="flex flex-col sm:flex-row gap-6 justify-center items-center"
           >
             <Link href="#contact">
-              <div className="group px-8 py-4 bg-gold-500 text-white rounded-lg text-lg font-semibold transition-all duration-300 hover:bg-gold-600 hover:shadow-xl hover:shadow-gold-500/20 transform hover:-translate-y-1">
-                <span className="relative inline-flex items-center">
+              <button className="mt-8 px-6 py-2 relative overflow-hidden rounded-lg border-2 border-gold-500 text-gold-500 transition-all duration-300 before:absolute before:inset-0 before:bg-gold-500 before:scale-x-0 before:origin-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white group">
+                <span className="relative z-10">
                   {HERO_CONFIG.cta.primary}
-                  <span className="absolute -right-6 group-hover:translate-x-4 transition-transform duration-300 opacity-0 group-hover:opacity-100">
-                    →
-                  </span>
                 </span>
-              </div>
+              </button>
             </Link>
             <Link href="/projects">
-              <div className="group px-8 py-4 border-2 border-white text-white rounded-lg text-lg font-semibold transition-all duration-300 hover:border-gold-500 hover:text-gold-500 hover:shadow-xl hover:shadow-gold-500/10 transform hover:-translate-y-1">
-                {HERO_CONFIG.cta.secondary}
-              </div>
+              <button className="mt-8 px-6 py-2 relative overflow-hidden rounded-lg border-2 border-gold-500 text-gold-500 transition-all duration-300 before:absolute before:inset-0 before:bg-gold-500 before:scale-x-0 before:origin-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white group">
+                <span className="relative z-10">
+                  {HERO_CONFIG.cta.secondary}
+                  </span>
+              </button>
             </Link>
           </motion.div>
         </motion.div>

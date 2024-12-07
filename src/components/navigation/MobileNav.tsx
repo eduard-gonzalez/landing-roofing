@@ -1,20 +1,23 @@
-import { ROUTES } from '@/utils/navigation';
-import { MobileNavProps } from '@/interfaces/componentsInterface';
-import Button from '@/components/ui/Button';
-import NavLink from '@/components/ui/NavLink';
+import { ROUTES } from "@/utils/navigation";
+import { MobileNavProps } from "@/interfaces/componentsInterface";
+import Button from "@/components/ui/Button";
+import NavLink from "@/components/ui/NavLink";
+import { Sun, Moon } from "lucide-react";
 
 const MobileNav = ({
   items,
   currentPath,
   isOpen,
   onClose,
+  isDark,
+  onThemeToggle,
   onNavigate,
 }: MobileNavProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 top-[73px] bg-white/80 dark:bg-gray-900/80 backdrop-blur-md">
-      <nav className="flex flex-col space-y-4 p-6">
+    <div className="fixed inset-0 top-[73px] bg-white dark:bg-gray-900">
+      <nav className="flex flex-col space-y-4 p-6 dark:bg-gray-900 bg-white">
         {items.map((item) => (
           <NavLink
             key={item.name}
@@ -35,8 +38,9 @@ const MobileNav = ({
             onClose();
           }}
         >
-          Contactar
+          Request a quote
         </Button>
+      
       </nav>
     </div>
   );

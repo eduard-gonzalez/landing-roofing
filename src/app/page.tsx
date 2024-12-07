@@ -2,7 +2,6 @@ import Hero from '@/components/home/Hero';
 import AboutUs from '@/components/home/AboutUs';
 import Services from '@/components/home/Services';
 import Projects from '@/components/home/Projects';
-import Contact from '@/components/home/Contact';
 
 const HomePage = () => {
   return (
@@ -18,9 +17,6 @@ const HomePage = () => {
       </section>
       <section id="projects">
         <Projects />
-      </section>
-      <section id="contact">
-        <Contact />
       </section>
     </>
   );

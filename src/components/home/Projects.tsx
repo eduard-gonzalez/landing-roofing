@@ -121,24 +121,10 @@ const FeaturedProjects = () => {
         </div>
 
         <div className="text-center mt-16">
-          <Link
-            href="/projects"
-            className="inline-flex items-center px-8 py-4 bg-gold-500 hover:bg-gold-600 text-white font-semibold rounded-lg transform hover:-translate-y-1 hover:shadow-xl transition-all duration-300"
-          >
-            {PROJECTS_CONFIG.cta}
-            <svg
-              className="ml-2 w-5 h-5"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
+          <Link href="/projects">
+            <button className="mt-8 px-6 py-2 relative overflow-hidden rounded-lg border-2 border-gold-500 text-gold-500 transition-all duration-300 before:absolute before:inset-0 before:bg-gold-500 before:scale-x-0 before:origin-right before:transition-transform before:duration-300 hover:before:scale-x-100 hover:before:origin-left hover:text-white group">
+              <span className="relative z-10">{PROJECTS_CONFIG.cta}</span>
+            </button>
           </Link>
         </div>
       </div>

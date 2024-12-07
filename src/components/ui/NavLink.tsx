@@ -14,7 +14,7 @@ const NavLink = ({ href, active, children, onClick }: NavLinkProps) => {
     <Link
       href={href}
       onClick={handleClick}
-      className={`text-sm font-medium transition-colors ${
+      className={`text-md uppercase font-bold transition-colors ${
         active
           ? 'text-gold-500'
           : 'text-gray-700 hover:text-gold-500 dark:text-gray-300 dark:hover:text-gold-400'

@@ -1,12 +1,13 @@
-'use client';
-import { useState, useEffect } from 'react';
-import { usePathname } from 'next/navigation';
-import { Menu, X } from 'lucide-react';
-import { ROUTES } from '@/utils/navigation';
-import DesktopNav from '@/components/navigation/DesktopNav';
-import MobileNav from '@/components/navigation/MobileNav';
-import Button from '@/components/ui/Button';
-import Logo from '@/components/ui/Logo';
+"use client";
+import { useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
+import { Menu, X } from "lucide-react";
+import { ROUTES } from "@/utils/navigation";
+import DesktopNav from "@/components/navigation/DesktopNav";
+import MobileNav from "@/components/navigation/MobileNav";
+import Button from "@/components/ui/Button";
+import Logo from "@/components/ui/Logo";
+import { Sun, Moon } from "lucide-react";
 
 const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Header = () => {
 
       window.scrollTo({
         top: offsetPosition,
-        behavior: 'smooth',
+        behavior: "smooth",
       });
     }
   };
@@ -37,23 +38,23 @@ const Header = () => {
   useEffect(() => {
     setMounted(true);
     const root = window.document.documentElement;
-    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
-    const storedTheme = localStorage.getItem('theme');
+    const mediaQuery = window.matchMedia("(prefers-color-scheme: dark)");
+    const storedTheme = localStorage.getItem("theme");
 
-    if (storedTheme === 'dark' || (!storedTheme && mediaQuery.matches)) {
-      root.classList.add('dark');
+    if (storedTheme === "dark" || (!storedTheme && mediaQuery.matches)) {
+      root.classList.add("dark");
       setIsDark(true);
     }
 
     function handleChange(e: MediaQueryListEvent) {
       if (!storedTheme) {
         setIsDark(e.matches);
-        root.classList.toggle('dark', e.matches);
+        root.classList.toggle("dark", e.matches);
       }
     }
 
-    mediaQuery.addEventListener('change', handleChange);
-    return () => mediaQuery.removeEventListener('change', handleChange);
+    mediaQuery.addEventListener("change", handleChange);
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   useEffect(() => {
@@ -62,10 +63,10 @@ const Header = () => {
 
   const toggleTheme = () => {
     const root = window.document.documentElement;
-    const newTheme = root.classList.contains('dark') ? 'light' : 'dark';
-    root.classList.toggle('dark', newTheme === 'dark');
-    setIsDark(newTheme === 'dark');
-    localStorage.setItem('theme', newTheme);
+    const newTheme = root.classList.contains("dark") ? "light" : "dark";
+    root.classList.toggle("dark", newTheme === "dark");
+    setIsDark(newTheme === "dark");
+    localStorage.setItem("theme", newTheme);
   };
 
   if (!mounted) return null;
@@ -82,12 +83,14 @@ const Header = () => {
           onThemeToggle={toggleTheme}
           onNavigate={scrollToSection}
         />
-
+        <Button variant="icon" onClick={toggleTheme} className="md:hidden">
+          {isDark ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
+        </Button>
         <Button
           variant="icon"
           className="md:hidden"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+          aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
         >
           {mobileMenuOpen ? (
             <X className="h-6 w-6" />
@@ -100,6 +103,8 @@ const Header = () => {
           items={navItems}
           currentPath={pathname}
           isOpen={mobileMenuOpen}
+          isDark={isDark}
+          onThemeToggle={toggleTheme}
           onClose={() => setMobileMenuOpen(false)}
           onNavigate={scrollToSection}
         />

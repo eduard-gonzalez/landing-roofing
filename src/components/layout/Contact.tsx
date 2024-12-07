@@ -77,7 +77,7 @@ const Contact = () => {
     () => [
       {
         icon: Phone,
-        title: "Teléfono",
+        title: "Phone",
         content: SITE_CONFIG.contact.phone,
       },
       {
@@ -87,12 +87,12 @@ const Contact = () => {
       },
       {
         icon: MapPin,
-        title: "Dirección",
+        title: "Address",
         content: SITE_CONFIG.contact.address,
       },
       {
         icon: Clock,
-        title: "Horario",
+        title: "Schedule",
         content: SITE_CONFIG.contact.schedule,
       },
     ],
